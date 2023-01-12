@@ -324,12 +324,15 @@ img {
 
 /* -------------------------FOOTER-------------------------- */
 
+.footer {
+  background-color: var(--heading-text-color);
+  color: var(--accent-color);
+}
+
 .footer-section {
   padding-top: 100px;
   padding-bottom: 100px;
 
-  background-color: var(--heading-text-color);
-  color: var(--accent-color);
 }
 
 .footer-content-wrapper {
