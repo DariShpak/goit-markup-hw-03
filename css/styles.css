@@ -64,6 +64,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -81,34 +83,16 @@ img {
 
 /* -----------------HEADER------------------------ */
 
-/* header logotype */
-
 .header {
   border-bottom: 1px solid var(--accent-color);
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-}
-
-.menu-nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav-item + .nav-item {
-  margin-left: 40px;
-}
-
+/* header logotype */
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -118,7 +102,6 @@ img {
   text-transform: uppercase;
   text-decoration: none;
 }
-
 .logo .accent {
   color: var(--primary-color);
 }
@@ -126,7 +109,35 @@ img {
   color: var(--heading-text-color);
   margin-right: 70px;
 }
-/* Navigation menu */
+
+/* --------------- Navigation menu-----------------*/
+
+.site-nav {
+  display: flex;
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--pressed-state-color);
+}
+.site-nav .link.current {
+  color: var(--pressed-state-color);
+}
+
+/* ------------------NAV - LINKS------------- */
+
+.nav-list {
+  display: flex;
+}
+
+.site-nav .link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.nav-item + .nav-item {
+  margin-left: 40px;
+}
 
 .nav-item {
   color: var(--heading-text-color);
@@ -135,23 +146,22 @@ img {
   text-decoration: none;
 }
 
-.menu-nav .link:hover,
-.menu-nav .link:focus {
-  color: var(--pressed-state-color);
-}
-
-.menu-nav .link.current {
-  color: var(--pressed-state-color);
-}
-
 /* ADDRESS SECTION */
+
+.address {
+  margin-left: auto;
+}
+
 .address-link .link {
   font-style: normal;
   line-height: 1.5;
   color: var(--main-text-color);
   text-decoration: none;
-}
 
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 .address-link .link:hover,
 .address-link .link:focus {
   color: var(--pressed-state-color);
@@ -159,7 +169,6 @@ img {
 
 .address-list {
   display: flex;
-  align-items: center;
 }
 
 .address-link:not(:last-child) {
@@ -169,9 +178,6 @@ img {
 /* HERO SECTION */
 .hero-section {
   background-color: var(--heading-text-color);
-  text-align: center;
-
-  display: flex;
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -181,16 +187,20 @@ img {
   font-size: 56px;
   line-height: 1.07;
   color: var(--hero-section-color);
-
   margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 494px;
 }
 
 .hero-btn {
-  align-items: center;
+  display: block;
   padding-top: 16px;
   padding-right: 32px;
   padding-bottom: 16px;
   padding-left: 32px;
+  margin-right: auto;
+  margin-left: auto;
 
   font-weight: 500;
   line-height: 1.5;
@@ -232,26 +242,24 @@ img {
 
 .feauters-section {
   background-color: var(--hero-section-color);
-
-  padding-bottom: 0px;
 }
 
 .feauters {
   display: flex;
-  gap: 24px;
 }
 
 .feauters-item {
   flex-basis: calc((100%-72px) / 4);
 }
 
-/* .feauters-item:not(:last-child) {
+.feauters-item:not(:last-child) {
   margin-right: 24px;
-} */
+}
 
 /* --------------------------------- OUR SERVICES */
 .services-section {
   text-align: center;
+  padding-top: 0;
 }
 
 .services-list {
@@ -266,6 +274,7 @@ img {
 .team-section {
   background-color: var(--light-mode-color);
   text-align: center;
+  padding-bottom: 120px;
 }
 
 .team-list {
@@ -286,26 +295,23 @@ img {
   padding-bottom: 32px;
 }
 
-.logo.footer {
-  color: var(--light-mode-color);
-}
-
 .footer-section {
   background-color: var(--heading-text-color);
   color: var(--accent-color);
-  display: flex;
-}
-
-.logo-wrapper {
-  margin-top: 100px;
-  margin-bottom: 16px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-content {
-  display: flex;
-  flex-direction: column;
-  width: 264px;
-  margin-bottom: 100px;
+  color: var(--accent-color);
+  max-width: 264px;
+  outline: 2px solid tomato;
+  margin: 16px;
+  text-align: left;
+}
+
+.logo.footer-section {
+  color: var(--light-mode-color);
 }
 
 /* ------------------------------ PAGE 2 POTFOLIO */
